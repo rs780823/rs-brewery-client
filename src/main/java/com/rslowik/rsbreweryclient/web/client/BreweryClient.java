@@ -30,7 +30,11 @@ public class BreweryClient {
     }
 
     public void updateBeer(UUID beerId, BeerDto dto) {
-        restTemplate.put(apiHost + BEER_PATH_V1 + beerId, dto);
+        restTemplate.put(apiHost + BEER_PATH_V1 + beerId.toString(), dto);
+    }
+
+    public void deleteBeer(UUID beerId) {
+        restTemplate.delete(apiHost + BEER_PATH_V1 + beerId.toString());
     }
 
     public void setApiHost(String apiHost) {
