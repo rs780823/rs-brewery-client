@@ -1,0 +1,1 @@
+package com.rslowik.rsbreweryclient.web.client;
